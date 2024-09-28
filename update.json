@@ -1,10 +1,7 @@
 {
-  "Visibility": "VISIBLE",
-  "Title": "Update fiture dan keamanan",
-  "Description": "fiture yang di tambahkan:\n- Fiture terbaru di tambahkan\n- Calibrar pixel diperbaiki\n- Beberapa logic di perbarui\n- Pengoptimalan aplikasi update\n- Configuration fiture added",
+  "Title": "Update fitur dan keamanan",
+  "Description": "Fitur yang ditambahkan:\n- Fitur terbaru ditambahkan\n- Calibrar pixel diperbaiki\n- Beberapa logic diperbarui\n- Pengoptimalan aplikasi update\n- Fitur konfigurasi ditambahkan",
   "MainTextButton": "UPDATE",
-  "Cancelable": "false",
-  "CancelButtonText": "UPDATE!",
-  "Url": "https://t.me/ChermodzsModule",
-  "Version": "true"
+  "Url": "https://t.me/ChermodzsModule"
+  "Version": "false"
 }
