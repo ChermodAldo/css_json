@@ -4,7 +4,7 @@
   "Description": "fiture yang di tambahkan:\n- Fiture terbaru di tambahkan\n- Calibrar pixel diperbaiki\n- Beberapa logic di perbarui\n- Pengoptimalan aplikasi update\n- Configuration fiture added",
   "MainTextButton": "UPDATE",
   "Cancelable": "false",
-  "CancelButtonText": "Cancel",
-  "Url": "",
-  "Version": "false"
+  "CancelButtonText": "UPDATE!",
+  "Url": "https://t.me/ChermodzsModule",
+  "Version": "true"
 }
