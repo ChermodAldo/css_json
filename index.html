@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CMS PERFORMANCE</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Orbitron:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="https://ChermodAldo.github.io/css_json/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="highlighted">CMS PERFORMANCE V12.0</h1>
+
+        <button class="button" id="performancePlusButton" title="Boost your performance"><i class="fas fa-arrow-up"></i>Performance++</button>
+        <button class="button" id="performanceMinusButton" title="Save battery by lowering performance"><i class="fas fa-arrow-down"></i>Performance--</button>
+        <button class="button reset-button" id="resetButton" title="Reset all settings"><i class="fas fa-sync-alt"></i>Reset Status</button>
+
+        <div class="status" id="status">Status: Idle</div>
+
+        <!-- FPS and Ping Display -->
+        <div class="fps" id="fps">FPS:<i class='fas fa-tachometer-alt'></i> N/A</div>
+        <div class="ping" id="ping">Ping:<i class='fas fa-signal'></i> N/A</div>
+
+        <!-- Progress Bar -->
+        <div class="progress-bar" id="progressBar"></div>
+
+        <!-- Info Card -->
+        <div class="info-card">
+            <h3 class="highlighted-text">Tips for Optimal Performance</h3>
+            <ul style="list-style-type:none;padding-left:0;">
+                <li>- Close unnecessary applications.</li>
+                <li>- Keep your system updated.</li>
+                <li>- Monitor your temperature levels.</li>
+            </ul>
+        </div>
+        
+        <!-- Modal for Star Game -->
+        <div id="starGameModal" class="modal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <p>Performance Boost Complete! Star your game now!</p>
+                <button id="starGameButton">Open Game</button>
+            </div>
+        </div>
+
+        <!-- Additional Information Section -->
+        <div class="additional-info">
+            <div class="graph-container">
+                <div class="graph">
+                    <div class="graph-bar" id="fpsGraph" style="width: 0;"></div>
+                </div>
+                <div class="graph">
+                    <div class="graph-bar" id="pingGraph" style="width: 0;"></div>
+                </div>
+            </div>
+            <p>Optimize your gaming experience with our powerful tools!</p>
+            <p>For support or feedback, contact us at Telegram <a href="#">@Chermodsc</a></p>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            &copy; @Chermodsc 2024 CMS PERFORMANCE | All Rights Reserved | 
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </footer>
+
+        <!-- Dark/Light Mode Toggle Button -->
+        <button class="toggle-button" id="toggleButton">Toggle Dark/Light Mode</button>
+    </div>
+
+    <!-- JavaScript Section -->
+    <script type="module" src="./script.js"></script>
+</body>
+      </html>
