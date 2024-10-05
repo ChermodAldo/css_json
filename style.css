@@ -190,3 +190,66 @@ footer {
     background: #ff4081; /* Pink tua saat diklik */
     transform: scale(0.95);
   }
+/* Gaya untuk modal update */
+.modalUpdate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000; /* Menempatkan modal di atas elemen lain */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang gelap transparan */
+}
+
+/* Konten Modal Update */
+.modalUpdate .modal-content {
+    background: linear-gradient(135deg, #ffffff, #f0f4f4); /* Latar belakang gradien yang lembut */
+    border-radius: 25px; /* Sudut melengkung untuk konten modal */
+    padding: 30px; /* Padding di dalam konten modal */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek dramatis */
+    width: 85%; /* Lebar konten modal */
+    max-width: 450px; /* Lebar maksimum untuk konten modal */
+    text-align: center; /* Penjajaran teks di tengah */
+    animation: fadeIn 0.3s ease; /* Animasi muncul modal */
+}
+
+/* Judul dan Paragraf dalam Modal */
+.modalUpdate .modal-content h2 {
+    margin: 0 0 20px; /* Margin bawah untuk judul */
+    color: #007bff; /* Warna judul */
+}
+
+.modalUpdate .modal-content p {
+    margin: 0 0 25px; /* Margin bawah untuk paragraf */
+    line-height: 1.7; /* Jarak antar baris untuk paragraf */
+}
+
+/* Gaya Tombol dalam Modal Update */
+.modalUpdate button {
+    background-color: #007bff; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Tanpa border */
+    border-radius: 50px; /* Tombol bulat penuh */
+    padding: 15px 40px; /* Padding tombol */
+    font-size: 18px; /* Ukuran font tombol */
+    cursor: pointer; /* Kursor tangan saat hover */
+    transition: background-color 0.3s ease; /* Transisi warna tombol */
+}
+
+.modalUpdate button:hover {
+    background-color: #0056b3; /* Warna tombol saat hover */
+}
+
+/* Animasi untuk Muncul dan Menghilang */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Mulai dari transparan */
+    to { opacity: 1; } /* Muncul penuh */
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; } /* Mulai dari penuh */
+    to { opacity: 0; } /* Menghilang */
+    }
