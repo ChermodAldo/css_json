@@ -1,4 +1,39 @@
 {
-    "title": "Test",
-    "description": "Aldo Gaming GitHub"
-}
+    "title": "CMS PERFORMANCE V12.0",
+    "description": "Pentingnya menjaga performa aplikasi untuk pengalaman bermain game yang optimal.",
+    "performancePlusButton": {
+        "title": "Boost your performance",
+        "icon": "fas fa-arrow-up"
+    },
+    "performanceMinusButton": {
+        "title": "Save battery by lowering performance",
+        "icon": "fas fa-arrow-down"
+    },
+    "resetButton": {
+        "title": "Reset all settings",
+        "icon": "fas fa-sync-alt"
+    },
+    "status": "Status: Idle",
+    "fps": "FPS: N/A",
+    "ping": "Ping: N/A",
+    "tips": [
+        "- Close unnecessary applications.",
+        "- Keep your system updated.",
+        "- Monitor your temperature levels."
+    ],
+    "modal": {
+        "starGame": {
+            "message": "Performance Boost Complete! Star your game now!",
+            "buttonText": "Open Game"
+        }
+    },
+    "additionalInfo": {
+        "optimizationMessage": "Optimize your gaming experience with our powerful tools!",
+        "contactInfo": "For support or feedback, contact us at Telegram @Chermodsc"
+    },
+    "footer": {
+        "copyright": "@Chermodsc 2024 CMS PERFORMANCE | All Rights Reserved",
+        "privacyPolicy": "Privacy Policy",
+        "termsOfService": "Terms of Service"
+    }
+    }
