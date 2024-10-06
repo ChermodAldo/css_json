@@ -253,3 +253,14 @@ footer {
     from { opacity: 1; } /* Mulai dari penuh */
     to { opacity: 0; } /* Menghilang */
     }
+
+.id {
+    font-size: 24px;
+    color: #aaa;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #ff5503;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
