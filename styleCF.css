@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #121212, #1f1f1f);
+    color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(30, 30, 30, 0.9);
+    padding: 35px;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.7);
+    width: 100%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+.container {
+    position: relative; /* Menjadikan kontainer sebagai referensi untuk posisi absolute */
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 25px;
+    color: #ffffff;
+    letter-spacing: 2px;
+    background: #ff5503; /* Tambahkan titik koma di sini */
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+p.id {
+    font-size: 16px;
+    color: #b0b0b0;
+    margin-bottom: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+p.id:hover {
+    color: #ff5503;
+    transform: scale(1.15);
+}
+
+button {
+    background: linear-gradient(90deg, #ff5503, #018786);
+    color: #000;
+    border: none;
+    border-radius: 50px;
+    padding: 14px 35px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    margin-bottom: 20px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ff5503, #3700b3);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+button:disabled {
+    background-color: #8f8f8f;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.hidden {
+    display: none;
+}
+
+#output {
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #282828;
+    color: #ffffff;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    overflow-y: auto;
+    max-height: 300px;
+    box-shadow: inset 0 0 15px rgba(0, 0, 0, 0.6);
+    transition: opacity 0.8s ease;
+}
+
+.loading {
+    display: inline-block;
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #ff5503;
+    border-radius: 50%;
+    width: 28px;
+    height: 28px;
+    animation: spin 1s linear infinite;
+    margin-left: 10px;
+}
+
+.id {
+    font-size: 24px;
+    color: #aaa;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #ff5503;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+pre {
+    background-color: #1e1e1e;
+    padding: 20px;
+    padding-right: 20px; /* Prevent text from sticking to the scrollbar */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    max-width: 600px;
+    margin: 20px auto;
+    color: #f0f0f0;
+    font-family: 'Courier New', monospace;
+    font-size: 15px; /* Adjust as needed */
+    line-height: 1.6;
+    white-space: pre-wrap;
+    border: 2px solid #ff5503;
+    border-left: 4px solid #ff5503;
+    box-shadow: inset 0 0 12px rgba(0, 0, 0, 0.6);
+    overflow-y: auto;
+    max-height: 400px;
+    transition: background-color 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
+    animation: fadeInOutput 1s ease-in;
+    font-weight: bold; /* Added for better readability */
+}
+
+pre:hover {
+    background-color: #282828;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6), inset 0 0 14px rgba(0, 0, 0, 0.7);
+}
+
+@keyframes fadeInOutput {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+pre::selection {
+    background: rgba(255, 85, 3, 0.5); /* Highlight color */
+    color: #fff; /* Text color on highlight */
+}
+
+pre::-webkit-scrollbar {
+    width: 10px;
+}
+
+pre::-webkit-scrollbar-thumb {
+    background-color: #ff5503;
+    border-radius: 5px;
+    border: 2px solid #1e1e1e;
+}
+
+#openGameButton {
+    background: linear-gradient(90deg, #ff5503, #3700b3);
+    font-size: 18px;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#openGameButton:hover {
+    background: linear-gradient(90deg, #3700b3, #ff5503);
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 500px) {
+    .container {
+        padding: 25px;
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    pre {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
+
+.modalUpdate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modalUpdate .modal-content {
+    background: linear-gradient(135deg, #121212, #1f1f1f);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    width: 85%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+.modalUpdate .modal-content h2 {
+    margin: 0 0 20px;
+    color: #ff5503;
+}
+
+.modalUpdate .modal-content p {
+    margin: 0 0 25px;
+    line-height: 1.7;
+}
+
+.modalUpdate button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modalUpdate button:hover {
+    background-color: #0056b3;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; }
+    to { opacity: 0; }
+      }
