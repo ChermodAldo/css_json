@@ -1,0 +1,252 @@
+/* Global Styles */
+body {
+font-family: 'Roboto', sans-serif;
+margin: 0;
+padding: 0;
+    background-color: #1f1f1f; /* Dark background */
+    background-color: #1f1f1f;
+color: #f4f4f9;
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+}
+
+
+.container {
+max-width: 900px;
+padding: 20px;
+text-align: center;
+    background-color: #2c2c2c; /* Dark container background */
+    background-color: #2c2c2c;
+border-radius: 10px;
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Title Styling */
+h1.highlighted {
+font-family: 'Orbitron', sans-serif;
+    color: #FFA500; /* Bright orange */
+    color: #FFA500;
+text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+margin-bottom: 20px;
+}
+
+/* Button Styles */
+.button {
+background-color: #FFA500;
+color: white;
+@@ -47,7 +43,6 @@ h1.highlighted {
+transform: translateY(-3px);
+}
+
+/* Status, FPS, and Ping */
+.status, .fps, .ping {
+font-family: 'Orbitron', sans-serif;
+transition: color 0.3s ease;
+@@ -63,7 +58,6 @@ h1.highlighted {
+.fps.medium, .ping.average { color: #ffcc00; }
+.fps.low, .ping.bad { color: #ff0000; }
+
+/* Progress Bar Styling */
+.progress-bar {
+width: 0;
+height: 10px;
+@@ -73,7 +67,6 @@ h1.highlighted {
+transition: width 3s ease-in-out;
+}
+
+/* Info Card */
+.info-card {
+background-color: #333;
+border-radius: 10px;
+@@ -91,14 +84,12 @@ h1.highlighted {
+padding-left: 0;
+}
+
+/* Footer */
+footer {
+margin-top: 30px;
+font-size: 14px;
+color: #aaa;
+}
+
+/* Dark/Light Mode Toggle */
+.toggle-button {
+position: fixed;
+bottom: 20px;
+@@ -126,8 +117,8 @@ footer {
+width: 100%;
+height: 100%;
+overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.7); /* Background lebih gelap */
+    backdrop-filter: blur(12px); /* Blur lebih halus */
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(12px);
+transition: opacity 0.3s ease;
+}
+
+@@ -140,35 +131,32 @@ footer {
+width: 70%;
+box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+animation: fadeIn 0.5s ease;
+    color: #000; /* Warna teks utama */
+    text-align: center; /* Posisikan teks di tengah */
+    font-size: 18px; /* Ukuran teks yang nyaman dibaca */
+    font-weight: bold; /* Tebal untuk keterbacaan */
+    color: #000;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+position: relative;
+}
+
+/* Tambahkan bayangan untuk teks */
+.modal-content p {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Bayangan hitam ringan */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Tambahkan background semi-transparan di belakang teks */
+#performance-text {
+    background-color: rgba(255, 255, 255, 0.7); /* Latar belakang semi-transparan */
+    background-color: rgba(255, 255, 255, 0.7);
+padding: 15px;
+    border-radius: 10px; /* Sudut membulat untuk teks */
+    display: inline-block; /* Biar mengikuti panjang teks */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Bayangan ringan di sekitar teks */
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@keyframes fadeIn {
+from { opacity: 0; }
+to { opacity: 1; }
+}
+
+/* Star Game Button Styling */
+#starGameButton {
+    background: linear-gradient(135deg, #6a00f4, #ff007f); /* Ungu ke pink */
+    background: linear-gradient(135deg, #6a00f4, #ff007f);
+color: white;
+padding: 20px;
+border: none;
+@@ -181,86 +169,71 @@ footer {
+}
+
+#starGameButton:hover {
+    background: linear-gradient(135deg, #ff007f, #007bff); /* Pink ke biru */
+    background: linear-gradient(135deg, #ff007f, #007bff);
+transform: scale(1.1);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+#starGameButton:active {
+    background: #ff4081; /* Pink tua saat diklik */
+    background: #ff4081;
+transform: scale(0.95);
+  }
+/* Gaya untuk modal update */
+}
+
+.modalUpdate {
+display: flex;
+justify-content: center;
+align-items: center;
+position: fixed;
+    z-index: 1000; /* Menempatkan modal di atas elemen lain */
+    z-index: 1000;
+left: 0;
+top: 0;
+width: 100%;
+height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Latar belakang gelap transparan */
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* Konten Modal Update */
+.modalUpdate .modal-content {
+    background: linear-gradient(135deg, #ffffff, #f0f4f4); /* Latar belakang gradien yang lembut */
+    border-radius: 25px; /* Sudut melengkung untuk konten modal */
+    padding: 30px; /* Padding di dalam konten modal */
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5); /* Bayangan untuk efek dramatis */
+    width: 85%; /* Lebar konten modal */
+    max-width: 450px; /* Lebar maksimum untuk konten modal */
+    text-align: center; /* Penjajaran teks di tengah */
+    animation: fadeIn 0.3s ease; /* Animasi muncul modal */
+    background: linear-gradient(135deg, #ffffff, #f0f4f4);
+    border-radius: 25px;
+    padding: 30px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+    width: 85%;
+    max-width: 450px;
+    text-align: center;
+    animation: fadeIn 0.3s ease;
+}
+
+/* Judul dan Paragraf dalam Modal */
+.modalUpdate .modal-content h2 {
+    margin: 0 0 20px; /* Margin bawah untuk judul */
+    color: #007bff; /* Warna judul */
+    margin: 0 0 20px;
+    color: #007bff;
+}
+
+.modalUpdate .modal-content p {
+    margin: 0 0 25px; /* Margin bawah untuk paragraf */
+    line-height: 1.7; /* Jarak antar baris untuk paragraf */
+    margin: 0 0 25px;
+    line-height: 1.7;
+}
+
+/* Gaya Tombol dalam Modal Update */
+.modalUpdate button {
+    background-color: #007bff; /* Warna tombol */
+    color: white; /* Warna teks tombol */
+    border: none; /* Tanpa border */
+    border-radius: 50px; /* Tombol bulat penuh */
+    padding: 15px 40px; /* Padding tombol */
+    font-size: 18px; /* Ukuran font tombol */
+    cursor: pointer; /* Kursor tangan saat hover */
+    transition: background-color 0.3s ease; /* Transisi warna tombol */
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 15px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modalUpdate button:hover {
+    background-color: #0056b3; /* Warna tombol saat hover */
+    background-color: #0056b3;
+}
+
+/* Animasi untuk Muncul dan Menghilang */
+@keyframes fadeIn {
+    from { opacity: 0; } /* Mulai dari transparan */
+    to { opacity: 1; } /* Muncul penuh */
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes fadeOut {
+    from { opacity: 1; } /* Mulai dari penuh */
+    to { opacity: 0; } /* Menghilang */
+    from { opacity: 1; }
+    to { opacity: 0; }
+}
+
+.id {
+    font-size: 24px;
+    color: #aaa;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid #ff5503;
+    padding: 10px;
+    border-radius: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
