@@ -289,4 +289,344 @@ transform: scale(1);
 to {
 transform: scale(1.2);
 }
+}
+.supportModalWrapper {
+display: none;
+justify-content: center;
+align-items: center;
+position: fixed;
+inset: 0;
+backdrop-filter: blur(4px);
+z-index: 9999;
+}
+
+.modal-content {
+background: rgba(255, 255, 255, 0.05);
+border-radius: 20px;
+padding: 30px;
+width: 90%;
+max-width: 460px;
+box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+animation: slideUp 0.4s ease;
+position: relative;
+border: 1px solid rgba(255, 255, 255, 0.1);
+text-align: center;
+}
+
+@keyframes slideUp {
+from {
+transform: translateY(30px);
+opacity: 0;
+}
+to {
+transform: translateY(0);
+opacity: 1;
+}
+}
+
+.modal-content .donate-btn {
+background: linear-gradient(90deg, #ff416c, #ff4b2b);
+padding: 14px 35px;
+border-radius: 40px;
+font-size: 16px;
+font-weight: bold;
+border: none;
+color: white;
+cursor: pointer;
+transition: transform 0.3s ease;
+}
+
+.modal-content .donate-btn:hover {
+transform: scale(1.05);
+}
+
+.media-sosial {
+display: flex;
+justify-content: center;
+gap: 4vw;
+margin-top: 25px;
+}
+
+.media-sosial i {
+font-size: 7vw;
+cursor: pointer;
+transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.media-sosial i:hover {
+transform: scale(1.2);
+}
+
+.tiktok:hover { color: #69C9D0; }
+.whatsapp:hover { color: #25D366; }
+.telegram:hover { color: #0088cc; }
+
+.close-btn {
+position: absolute;
+top: 15px;
+right: 20px;
+font-size: 20px;
+color: #ccc;
+cursor: pointer;
+}
+
+.heart-img {
+width: 50px;
+height: 50px;
+}
+.gradient-text {
+background: linear-gradient(90deg, #ff7eb3, #65b2ff);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+    }<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X-TUNER</title>
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #1A1A1A;
+            color: white;
+            margin: 0;
+            padding-bottom: 60px; /* Tambah jarak untuk footer */
+        }
+
+        .header {
+            padding: 15px;
+            background: linear-gradient(135deg, #333333, #1c1c1c);
+            text-align: center;
+            font-size: 22px;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            letter-spacing: 1px;
+            color: #FFF;
+        }
+
+        .settings-icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .settings-icon:hover {
+            transform: rotate(90deg);
+        }
+
+        .game-mode {
+            margin: 20px;
+            padding: 20px;
+            background-color: #2a2a2a;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        .game-mode h2 {
+            margin: 0;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: 1.2px;
+        }
+
+        .mode-options {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .mode-option {
+            padding: 12px 16px;
+            background-color: #444;
+            border-radius: 8px;
+            text-align: center;
+            width: 70px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+            font-size: 14px;
+        }
+
+        .mode-option:hover {
+            background-color: #FF3E3E;
+            transform: scale(1.05);
+        }
+
+        .mode-option.active {
+            background-color: #FF3E3E;
+        }
+
+        .settings-section {
+            margin: 20px;
+        }
+
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2a2a2a;
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .toggle {
+            position: relative;
+            width: 40px;
+            height: 20px;
+            background-color: #FF3E3E;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .toggle input {
+            display: none;
+        }
+
+        .toggle:before {
+            content: '';
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: white;
+            border-radius: 50%;
+            top: 1px;
+            left: 1px;
+            transition: 0.3s;
+        }
+
+        input:checked + .toggle {
+            background-color: #3EE27E;
+        }
+
+        input:checked + .toggle:before {
+            left: 20px;
+        }
+
+        .fab {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #FF3E3E;
+            padding: 15px;
+            border-radius: 50%;
+            text-align: center;
+            color: white;
+            font-size: 24px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .fab:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        ML X-TUNER
+        <div class="settings-icon">⚙️</div> <!-- Simulasi ikon pengaturan -->
+    </div>
+
+    <div class="game-mode">
+        <h2>Game Mode</h2>
+        <div class="mode-options">
+            <div class="mode-option" onclick="setMode(this)">None</div>
+            <div class="mode-option" onclick="setMode(this)">Low</div>
+            <div class="mode-option" onclick="setMode(this)">Battery</div>
+            <div class="mode-option" onclick="setMode(this)">Power-X</div>
+        </div>
+    </div>
+
+    <div class="settings-section">
+        <div class="setting-item">
+            <div>Optimize GPU</div>
+            <label class="toggle">
+                <input type="checkbox" />
+                <div class="toggle"></div>
+            </label>
+        </div>
+        <div class="setting-item">
+            <div>Ram Flush</div>
+            <label class="toggle">
+                <input type="checkbox" />
+                <div class="toggle"></div>
+            </label>
+        </div>
+        <div class="setting-item">
+            <div>X-Speed</div>
+            <label class="toggle">
+                <input type="checkbox" />
+                <div class="toggle"></div>
+            </label>
+        </div>
+        <div class="setting-item">
+            <div>Refresh Rate (60Hz)</div>
+            <label class="toggle">
+                <input type="checkbox" />
+                <div class="toggle"></div>
+            </label>
+        </div>
+        <div class="setting-item">
+            <div>Crona AI</div>
+            <label class="toggle">
+                <input type="checkbox" />
+                <div class="toggle"></div>
+            </label>
+        </div>
+    </div>
+
+    <div class="fab">Open Game</div> <!-- Simulasi tombol FAB -->
+
+<script>
+    // Fungsi untuk mengatur mode game
+    function setMode(element) {
+        const modes = document.querySelectorAll('.mode-option');
+        modes.forEach(mode => mode.classList.remove('active'));
+        element.classList.add('active');
+
+        // Simpan mode yang dipilih ke localStorage
+        localStorage.setItem('selectedMode', element.textContent);
     }
+
+    // Ambil dan set mode game yang dipilih dari localStorage
+    document.addEventListener('DOMContentLoaded', () => {
+        const savedMode = localStorage.getItem('selectedMode');
+        if (savedMode) {
+            const modes = document.querySelectorAll('.mode-option');
+            modes.forEach(mode => {
+                if (mode.textContent === savedMode) {
+                    mode.classList.add('active');
+                }
+            });
+        } else {
+            // Jika tidak ada yang disimpan, set "None" sebagai default
+            document.querySelector('.mode-option').classList.add('active');
+        }
+
+        // Ambil dan set status checkbox dari localStorage
+        const toggles = document.querySelectorAll('.toggle input');
+        toggles.forEach((toggle, index) => {
+            const savedToggle = localStorage.getItem('toggle' + index);
+            if (savedToggle === 'true') {
+                toggle.checked = true;
+            }
+        });
+
+        // Tambah event listener ke semua checkbox untuk menyimpan statusnya
+        toggles.forEach((toggle, index) => {
+            toggle.addEventListener('change', () => {
+                localStorage.setItem('toggle' + index, toggle.checked);
+            });
+        });
+    });
+</script>
+</body>
+</html>
