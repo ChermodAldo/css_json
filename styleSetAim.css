@@ -378,3 +378,48 @@ background: linear-gradient(90deg, #ff7eb3, #65b2ff);
 -webkit-background-clip: text;
 -webkit-text-fill-color: transparent;
 }
+.swipe-button {
+  position: relative;
+  width: 250px;
+  height: 50px;
+  background: linear-gradient(90deg, #4CAF50, #2E7D32);
+  border-radius: 30px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 16px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.swipe-text {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.swipe-handle {
+  position: absolute;
+  left: 0;
+  width: 50px;
+  height: 50px;
+  background: #fff;
+  color: #4CAF50;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: left 0.3s ease;
+}
+
+.swipe-button.active .swipe-handle {
+  left: calc(100% - 50px);
+}
+
+.swipe-button.active .swipe-text {
+  opacity: 0;
+  }
