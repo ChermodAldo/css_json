@@ -57,6 +57,8 @@ padding: 25px 20px;
 border-radius: 15px;
 box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
 width: 400px;
+  align-items: center; /* buat sejajar tengah */
+
 z-index: 1;
 }
 
@@ -384,7 +386,8 @@ background: linear-gradient(90deg, #ff7eb3, #65b2ff);
   background: rgba(20, 20, 20, 0.8);
   border: 1px solid rgba(255, 126, 179, 0.2);
   border-radius: 18px;
-  width: 300px;
+  width: 100%;
+  max-width: 320px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -392,7 +395,8 @@ background: linear-gradient(90deg, #ff7eb3, #65b2ff);
   box-shadow: 0 0 25px rgba(255, 126, 179, 0.15);
   backdrop-filter: blur(10px);
   animation: fadeIn 0.8s ease forwards;
-  margin-top: 20px;
+  margin-top: 5px;
+  box-sizing: border-box;
 }
 
 .game-info {
@@ -508,4 +512,4 @@ background: linear-gradient(90deg, #ff7eb3, #65b2ff);
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
   to { opacity: 1; transform: translateY(0); }
-  }
+                           }
